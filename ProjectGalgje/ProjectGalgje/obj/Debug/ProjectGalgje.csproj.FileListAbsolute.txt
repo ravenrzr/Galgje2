@@ -8,3 +8,6 @@ C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Project_Galgje\P
 C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Project_Galgje\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csproj.CoreCompileInputs.cache
 C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Project_Galgje\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.exe
 C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Project_Galgje\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.pdb
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Project_Galgje\ProjectGalgje\ProjectGalgje\bin\Debug\System.Collections.Immutable.dll
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Project_Galgje\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.frmwoorden.resources
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Project_Galgje\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csproj.CopyComplete

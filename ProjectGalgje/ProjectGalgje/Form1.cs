@@ -183,6 +183,8 @@ namespace ProjectGalgje
 
         private void WoordenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            frmwoorden frm_instantie = new frmwoorden();
+            frm_instantie.Show();
 
         }
     }
