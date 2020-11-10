@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ProjectGalgje
 {
@@ -19,10 +20,74 @@ namespace ProjectGalgje
 
         private void Btnalle_Click(object sender, EventArgs e)
         {
-            string[] list = "aan, aanbod, aanraken, aanval, aap, aardappel, aarde, aardig, acht, achter, actief, activiteit, ademen, af, afgelopen, afhangen, afmaken, afname, afspraak, afval, al, algemeen, alleen, alles, als, alsjeblieft, altijd, ander, andere, anders, angst, antwoord, antwoorden, appel, arm, auto, avond, avondeten, baan, baby, bad, bal, bang, bank, basis, bed, bedekken, bedreiging, bedreven, been, beer, beest, beetje, begin, begrijpen, begrip, behalve, beide, beker, bel, belangrijk, bellen, belofte, beneden, benzine, berg, beroemd, beroep, bescherm, beslissen, best, betalen, beter, bevatten, bewegen, bewolkt, bezoek, bibliotheek, bieden, bij, bijna, bijten, bijvoorbeeld, bijzonder, binnen, binnenkort, blad, blauw, blazen, blij, blijven, bloed, bloem, bodem, boek, boerderij, boete, boom, boon, boord, boos, bord, borstelen, bos, bot, bouwen, boven, branden, brandstof, breed, breken, brengen, brief, broer, broek, brood, brug, bruikbaar, bruiloft, bruin, bui, buiten, bureau, buren, bus, buurman, buurvrouw, 5".Split(',');
+
+            string path = AppDomain.CurrentDomain.BaseDirectory + "woorden.txt";
+            StreamReader lees = new StreamReader(path);
+
+            string[] list = lees.ReadToEnd().Split(',');
             for(int count = 0; count < list.Length; count++)
             {
-                listBox1.Items.Add(list[count]);
+                if(list[count].Contains(" "))
+                {
+                    list[count] = list[count].Replace(" ", "");
+                }
+                lstbxwoorden.Items.Add(list[count]);
+            }
+        }
+
+        private void Btnverwijderen_Click(object sender, EventArgs e)
+        {
+            if(lstbxwoorden.SelectedIndex == -1)
+            {
+                MessageBox.Show("Niks geselecteerd!", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                lstbxwoorden.Items.Remove(lstbxwoorden.SelectedItem);
+            }
+        }
+
+        private void Btninvoegen_Click(object sender, EventArgs e)
+        {
+            if(!txtinvoegen.Text.Equals(""))
+            {
+                if (!lstbxwoorden.Items.Contains(txtinvoegen.Text))
+                {
+                    lstbxwoorden.Items.Add(txtinvoegen.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Dit woord is al een deel van de woordenlijst!", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vul alstublieft iets in om toe te voegen tot de woordenlijst!", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Btnleeg_Click(object sender, EventArgs e)
+        {
+            if(lstbxwoorden.Items.Count != 0)
+            {
+                lstbxwoorden.Items.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Niks om te legen!", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Frmwoorden_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string path = AppDomain.CurrentDomain.BaseDirectory + "galgje.txt";
+
+            using (StreamWriter writer = File.CreateText(path))
+            {
+                for (int count = 0; count < lstbxwoorden.Items.Count; count++)
+                {
+                    writer.WriteLine(lstbxwoorden.Items[count].ToString());
+                }
             }
         }
     }

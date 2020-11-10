@@ -11,3 +11,16 @@ C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Project_Galgje\P
 C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Project_Galgje\ProjectGalgje\ProjectGalgje\bin\Debug\System.Collections.Immutable.dll
 C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Project_Galgje\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.frmwoorden.resources
 C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Project_Galgje\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csproj.CopyComplete
+D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\bin\Debug\ProjectGalgje.exe.config
+D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\bin\Debug\ProjectGalgje.exe
+D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\bin\Debug\ProjectGalgje.pdb
+D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\bin\Debug\System.Collections.Immutable.dll
+D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csprojAssemblyReference.cache
+D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.frmgalgje.resources
+D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.frmwoorden.resources
+D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.Properties.Resources.resources
+D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csproj.GenerateResource.cache
+D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csproj.CoreCompileInputs.cache
+D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csproj.CopyComplete
+D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.exe
+D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.pdb

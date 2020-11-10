@@ -1,0 +1,10 @@
+D:\school\C# projects\jaar 2\C#\oef2\oef2\bin\Debug\oef2.exe.config
+D:\school\C# projects\jaar 2\C#\oef2\oef2\bin\Debug\oef2.exe
+D:\school\C# projects\jaar 2\C#\oef2\oef2\bin\Debug\oef2.pdb
+D:\school\C# projects\jaar 2\C#\oef2\oef2\obj\Debug\oef2.csprojAssemblyReference.cache
+D:\school\C# projects\jaar 2\C#\oef2\oef2\obj\Debug\oef2.frmoef2.resources
+D:\school\C# projects\jaar 2\C#\oef2\oef2\obj\Debug\oef2.Properties.Resources.resources
+D:\school\C# projects\jaar 2\C#\oef2\oef2\obj\Debug\oef2.csproj.GenerateResource.cache
+D:\school\C# projects\jaar 2\C#\oef2\oef2\obj\Debug\oef2.csproj.CoreCompileInputs.cache
+D:\school\C# projects\jaar 2\C#\oef2\oef2\obj\Debug\oef2.exe
+D:\school\C# projects\jaar 2\C#\oef2\oef2\obj\Debug\oef2.pdb
