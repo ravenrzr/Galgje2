@@ -105,6 +105,7 @@
             this.Name = "frmwoorden";
             this.Text = "Woorden";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frmwoorden_FormClosing);
+            this.Load += new System.EventHandler(this.Frmwoorden_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
