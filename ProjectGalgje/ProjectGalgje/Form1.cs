@@ -27,9 +27,9 @@ namespace ProjectGalgje
 
         private void Button6_Click(object sender, EventArgs e)
         {
-            btnI.Enabled = false;
-            letter = 'I';
-            SetGalg();
+            btnI.Enabled = false;             //disable the button
+            letter = 'I';            //set the specified letter
+            SetGalg();            //call function to change the label and check if player has won
         }
 
         private void BtnA_Click(object sender, EventArgs e)
@@ -210,11 +210,13 @@ namespace ProjectGalgje
 
         private void WoordenIngevenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //open wikipedia for the rules
             System.Diagnostics.Process.Start("https://nl.wikipedia.org/wiki/Galgje");
         }
 
         private void WoordenToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //open form2
             frmwoorden frm_instantie = new frmwoorden();
             frm_instantie.Show();
 
@@ -227,32 +229,46 @@ namespace ProjectGalgje
 
         private void Frmgalgje_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            //confirm exit
             DialogResult dialog = MessageBox.Show("Bent u zeker dat u wilt afsluiten?", "Bevestiging", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+            //if answer is no, cancel exit
             e.Cancel = (dialog == DialogResult.No);
 
         }
 
+        //function to set the label and determine if the player has won
         private void SetGalg()
         {
+
             pbHangman.Visible = true;
             
+
+            //check if word contains the pressed letter
+
             if (woord.Contains(letter.ToString().ToLower()))
             {
+                //create array to split the chosen word into letters
                 char[] newword = woord.ToCharArray();
+
 
                 for (int count = 0; count < newword.Length; count++)
                 {
+                    //check if the specified letter in the array is equal to the pressed letter
                     if (newword[count].ToString() == letter.ToString().ToLower())
                     {
+
+                        //create new array that contains the unfinished word and assign the pressed letter to the right place
                         char[] newer = guessedword.ToCharArray();
                         newer[count] = letter;
                         guessedword = new string(newer);
                     }
                 }
 
+                //set label to unfinished word
                 lblwoord.Text = guessedword;
+
+                //if the guessed word is equal to the chosen word then the player wins
                 if (guessedword.ToLower().Equals(woord))
                 {
                     MessageBox.Show("Je hebt gewonnen!", "Uitslag", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -285,11 +301,14 @@ namespace ProjectGalgje
             }
         }
 
+        //reset the game
         public void Reset()
         {
 
+            //reset label
             lblwoord.Text = "";
 
+            //reset buttons
             btnA.Enabled = true;
             btnB.Enabled = true;
             btnC.Enabled = true;
@@ -322,17 +341,28 @@ namespace ProjectGalgje
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
+            //call reset function
             Reset();
 
+            //enable buttons
             btnstart.Enabled = false;
             btnstart.Visible = false;
 
+            //set path to "galgje.txt"
             string path = AppDomain.CurrentDomain.BaseDirectory + "galgje.txt";
+
             
+
+
+            //create random numbergenerator
+
             Random random = new Random();
+
+            //set int getal to the amount of lines in "galgje.txt"
             int getal = random.Next(File.ReadAllLines(path).Length);
 
+
+            //read the specified line chosen by the random numbergenerator and set word to that line
             using (StreamReader reader = new StreamReader(path))
             {
                 for(int count = 0; count < getal; count++)
@@ -341,6 +371,8 @@ namespace ProjectGalgje
                 }
             }
 
+
+            //if word is not given then send an error message else, set the label and the unfinished (guessed) word to "_"
             if (woord.Equals(""))
             {
                 MessageBox.Show("Geen woorden ingegeven!", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -349,17 +381,15 @@ namespace ProjectGalgje
             {
                 for (int count = 0; count < woord.Length; count++)
                 {
-                    if(count == woord.Length)
-                    {
-                        lblwoord.Text += "_";
-                    }
-                    else
-                    {
-                        lblwoord.Text += "_";
-                    }
+                    lblwoord.Text += "_";
                 }
                 guessedword = lblwoord.Text;
             }
+        }
+
+        private void Frmgalgje_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

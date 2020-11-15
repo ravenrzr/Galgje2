@@ -435,6 +435,7 @@
             this.Name = "frmgalgje";
             this.Text = "Galgje";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frmgalgje_FormClosing);
+            this.Load += new System.EventHandler(this.Frmgalgje_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHangman)).EndInit();

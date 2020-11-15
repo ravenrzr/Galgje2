@@ -21,67 +21,86 @@ namespace ProjectGalgje
         private void Btnalle_Click(object sender, EventArgs e)
         {
 
+            //set path to "woorden.txt"
             string path = AppDomain.CurrentDomain.BaseDirectory + "woorden.txt";
             StreamReader lees = new StreamReader(path);
 
+            //create array from "woorden.txt" and replace all spaces
             string[] list = lees.ReadToEnd().Split(',');
+
             for(int count = 0; count < list.Length; count++)
             {
+                //check if the array contains spaces
                 if(list[count].Contains(" "))
                 {
+                    //replace spaces with empty string
                     list[count] = list[count].Replace(" ", "");
                 }
+                //set the items in the item list to the array
                 lstbxwoorden.Items.Add(list[count]);
             }
         }
 
         private void Btnverwijderen_Click(object sender, EventArgs e)
         {
+            //check if the user hasn't selected any items from the list
             if(lstbxwoorden.SelectedIndex == -1)
             {
+                //send error message
                 MessageBox.Show("Niks geselecteerd!", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                //remove item from list
                 lstbxwoorden.Items.Remove(lstbxwoorden.SelectedItem);
             }
         }
 
         private void Btninvoegen_Click(object sender, EventArgs e)
         {
+            //check if the user has filled in the textbox
             if(!txtinvoegen.Text.Equals(""))
             {
+                //check if the word in the textbox is already a part of the list
                 if (!lstbxwoorden.Items.Contains(txtinvoegen.Text))
                 {
+                    //add word in textbox to list
                     lstbxwoorden.Items.Add(txtinvoegen.Text);
                 }
                 else
                 {
+                    //send errormessage
                     MessageBox.Show("Dit woord is al een deel van de woordenlijst!", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
+                //send errormessage
                 MessageBox.Show("Vul alstublieft iets in om toe te voegen tot de woordenlijst!", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Btnleeg_Click(object sender, EventArgs e)
         {
+            //check if the list has any items to clear
             if(lstbxwoorden.Items.Count != 0)
             {
+                //clear list
                 lstbxwoorden.Items.Clear();
             }
             else
             {
+                //send error message
                 MessageBox.Show("Niks om te legen!", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void Frmwoorden_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //set path to "galgje.txt"
             string path = AppDomain.CurrentDomain.BaseDirectory + "galgje.txt";
 
+            //write the items from the list to "galgje.txt"
             using (StreamWriter writer = File.CreateText(path))
             {
                 for (int count = 0; count < lstbxwoorden.Items.Count; count++)
@@ -89,6 +108,11 @@ namespace ProjectGalgje
                     writer.WriteLine(lstbxwoorden.Items[count].ToString());
                 }
             }
+        }
+
+        private void Frmwoorden_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
