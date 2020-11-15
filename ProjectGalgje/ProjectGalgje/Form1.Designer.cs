@@ -61,7 +61,9 @@
             this.afsluitenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblwoord = new System.Windows.Forms.Label();
             this.btnstart = new System.Windows.Forms.Button();
+            this.pbHangman = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHangman)).BeginInit();
             this.SuspendLayout();
             // 
             // btnA
@@ -333,41 +335,41 @@
             this.afsluitenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 27);
             this.menuStrip1.TabIndex = 26;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // woordenIngevenToolStripMenuItem
             // 
             this.woordenIngevenToolStripMenuItem.Name = "woordenIngevenToolStripMenuItem";
-            this.woordenIngevenToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.woordenIngevenToolStripMenuItem.Size = new System.Drawing.Size(60, 23);
             this.woordenIngevenToolStripMenuItem.Text = "Regels";
             this.woordenIngevenToolStripMenuItem.Click += new System.EventHandler(this.WoordenIngevenToolStripMenuItem_Click);
             // 
             // woordenToolStripMenuItem
             // 
             this.woordenToolStripMenuItem.Name = "woordenToolStripMenuItem";
-            this.woordenToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
+            this.woordenToolStripMenuItem.Size = new System.Drawing.Size(77, 23);
             this.woordenToolStripMenuItem.Text = "Woorden";
             this.woordenToolStripMenuItem.Click += new System.EventHandler(this.WoordenToolStripMenuItem_Click);
             // 
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(45, 23);
             this.infoToolStripMenuItem.Text = "Info";
             // 
             // afsluitenToolStripMenuItem
             // 
             this.afsluitenToolStripMenuItem.Name = "afsluitenToolStripMenuItem";
-            this.afsluitenToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.afsluitenToolStripMenuItem.Size = new System.Drawing.Size(74, 23);
             this.afsluitenToolStripMenuItem.Text = "Afsluiten";
             this.afsluitenToolStripMenuItem.Click += new System.EventHandler(this.AfsluitenToolStripMenuItem_Click);
             // 
             // lblwoord
             // 
             this.lblwoord.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblwoord.Location = new System.Drawing.Point(101, 262);
+            this.lblwoord.Location = new System.Drawing.Point(105, 385);
             this.lblwoord.Name = "lblwoord";
             this.lblwoord.Size = new System.Drawing.Size(598, 45);
             this.lblwoord.TabIndex = 27;
@@ -384,11 +386,22 @@
             this.btnstart.UseVisualStyleBackColor = true;
             this.btnstart.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // pbHangman
+            // 
+            this.pbHangman.Location = new System.Drawing.Point(151, 30);
+            this.pbHangman.Name = "pbHangman";
+            this.pbHangman.Size = new System.Drawing.Size(502, 285);
+            this.pbHangman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbHangman.TabIndex = 30;
+            this.pbHangman.TabStop = false;
+            this.pbHangman.Visible = false;
+            // 
             // frmgalgje
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbHangman);
             this.Controls.Add(this.btnstart);
             this.Controls.Add(this.lblwoord);
             this.Controls.Add(this.btnY);
@@ -424,6 +437,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frmgalgje_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHangman)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -464,6 +478,7 @@
         private System.Windows.Forms.ToolStripMenuItem afsluitenToolStripMenuItem;
         private System.Windows.Forms.Label lblwoord;
         private System.Windows.Forms.Button btnstart;
+        private System.Windows.Forms.PictureBox pbHangman;
     }
 }
 

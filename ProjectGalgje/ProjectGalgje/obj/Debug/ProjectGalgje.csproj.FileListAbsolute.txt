@@ -24,3 +24,16 @@ D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGal
 D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csproj.CopyComplete
 D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.exe
 D:\school\C# projects\jaar 2\C#\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.pdb
+C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\bin\Debug\ProjectGalgje.exe.config
+C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\bin\Debug\ProjectGalgje.exe
+C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\bin\Debug\ProjectGalgje.pdb
+C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\bin\Debug\System.Collections.Immutable.dll
+C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csprojAssemblyReference.cache
+C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.frmgalgje.resources
+C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.frmwoorden.resources
+C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.Properties.Resources.resources
+C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csproj.GenerateResource.cache
+C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csproj.CoreCompileInputs.cache
+C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csproj.CopyComplete
+C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.exe
+C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.pdb
