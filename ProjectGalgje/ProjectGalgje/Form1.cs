@@ -248,10 +248,10 @@ namespace ProjectGalgje
 
             //check if word contains the pressed letter
 
-            if (woord.Contains(letter.ToString().ToLower()))
+            if (woord.ToLower().Contains(letter.ToString().ToLower()))
             {
                 //create array to split the chosen word into letters
-                char[] newword = woord.ToCharArray();
+                char[] newword = woord.ToLower().ToCharArray();
 
 
                 for (int count = 0; count < newword.Length; count++)
@@ -271,9 +271,10 @@ namespace ProjectGalgje
                 lblwoord.Text = guessedword;
 
                 //if the guessed word is equal to the chosen word then the player wins
-                if (guessedword.ToLower().Equals(woord))
+                if (guessedword.ToLower().Equals(woord.ToLower()))
                 {
                     MessageBox.Show("Je hebt gewonnen!", "Uitslag", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    disable();
                     btnstart.Enabled = true;
                     btnstart.Visible = true;
                 }

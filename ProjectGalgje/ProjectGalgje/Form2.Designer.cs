@@ -34,6 +34,8 @@
             this.btnverwijderen = new System.Windows.Forms.Button();
             this.btnalle = new System.Windows.Forms.Button();
             this.btnleeg = new System.Windows.Forms.Button();
+            this.cmbxcat = new System.Windows.Forms.ComboBox();
+            this.lblcat = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lstbxwoorden
@@ -91,11 +93,37 @@
             this.btnleeg.UseVisualStyleBackColor = true;
             this.btnleeg.Click += new System.EventHandler(this.Btnleeg_Click);
             // 
+            // cmbxcat
+            // 
+            this.cmbxcat.FormattingEnabled = true;
+            this.cmbxcat.Items.AddRange(new object[] {
+            "Kledij",
+            "Meubilair",
+            "Dieren",
+            "Computeronderdelen",
+            "Videogames"});
+            this.cmbxcat.Location = new System.Drawing.Point(199, 40);
+            this.cmbxcat.Name = "cmbxcat";
+            this.cmbxcat.Size = new System.Drawing.Size(121, 21);
+            this.cmbxcat.TabIndex = 6;
+            this.cmbxcat.SelectedIndexChanged += new System.EventHandler(this.Cmbxcat_SelectedIndexChanged);
+            // 
+            // lblcat
+            // 
+            this.lblcat.AutoSize = true;
+            this.lblcat.Location = new System.Drawing.Point(226, 17);
+            this.lblcat.Name = "lblcat";
+            this.lblcat.Size = new System.Drawing.Size(64, 13);
+            this.lblcat.TabIndex = 7;
+            this.lblcat.Text = "Categoriëen";
+            // 
             // frmwoorden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(221, 224);
+            this.ClientSize = new System.Drawing.Size(338, 217);
+            this.Controls.Add(this.lblcat);
+            this.Controls.Add(this.cmbxcat);
             this.Controls.Add(this.btnleeg);
             this.Controls.Add(this.btnalle);
             this.Controls.Add(this.btnverwijderen);
@@ -119,5 +147,7 @@
         private System.Windows.Forms.Button btnverwijderen;
         private System.Windows.Forms.Button btnalle;
         private System.Windows.Forms.Button btnleeg;
+        private System.Windows.Forms.ComboBox cmbxcat;
+        private System.Windows.Forms.Label lblcat;
     }
 }
