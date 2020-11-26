@@ -279,29 +279,47 @@ namespace ProjectGalgje
                 }
             }
             else
-            { tllr++;
+            {
+                tllr++;
                 
-                if(tllr == 1) { pbHangman.Image = Properties.Resources.Screenshot_94; }
-                if (tllr == 2) { pbHangman.Image = Properties.Resources.Screenshot_95; }
-                if (tllr == 3) { pbHangman.Image = Properties.Resources.Screenshot_96; }
-                if (tllr == 4) { pbHangman.Image = Properties.Resources.Screenshot_97; }
-                if (tllr == 5) { pbHangman.Image = Properties.Resources.Screenshot_98; }
-                if (tllr == 6) { pbHangman.Image = Properties.Resources.Screenshot_99; }
-                if (tllr == 7) { pbHangman.Image = Properties.Resources.Screenshot_100; }
-                if (tllr == 8) { pbHangman.Image = Properties.Resources.Screenshot_101; }
-                if (tllr == 9) { pbHangman.Image = Properties.Resources.Screenshot_102; }
-                if (tllr == 10)
+                switch(tllr)
                 {
-                    pbHangman.Image = Properties.Resources.Screenshot_103;
-                    MessageBox.Show("helaas, je bent verloren\n\nHet woord was: " + woord, "Uitslag", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    tllr = 0;
-                    disable();
-                    btnstart.Enabled = true;
-                    btnstart.Visible = true;
+                    case 1:
+                        pbHangman.Image = Properties.Resources.Screenshot_94;
+                        break;
+                    case 2:
+                        pbHangman.Image = Properties.Resources.Screenshot_95;
+                        break;
+                    case 3:
+                        pbHangman.Image = Properties.Resources.Screenshot_96;
+                        break;
+                    case 4:
+                        pbHangman.Image = Properties.Resources.Screenshot_97;
+                        break;
+                    case 5:
+                        pbHangman.Image = Properties.Resources.Screenshot_98;
+                        break;
+                    case 6:
+                        pbHangman.Image = Properties.Resources.Screenshot_99;
+                        break;
+                    case 7:
+                        pbHangman.Image = Properties.Resources.Screenshot_100;
+                        break;
+                    case 8:
+                        pbHangman.Image = Properties.Resources.Screenshot_101;
+                        break;
+                    case 9:
+                        pbHangman.Image = Properties.Resources.Screenshot_102;
+                        break;
+                    case 10:
+                        pbHangman.Image = Properties.Resources.Screenshot_103;
+                        MessageBox.Show("helaas, je bent verloren\n\nHet woord was: " + woord, "Uitslag", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        tllr = 0;
+                        disable();
+                        btnstart.Enabled = true;
+                        btnstart.Visible = true;
+                        break;
                 }
-
-
-
             }
         }
 
