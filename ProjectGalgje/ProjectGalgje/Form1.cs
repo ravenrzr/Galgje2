@@ -25,6 +25,8 @@ namespace ProjectGalgje
 
         private char letter;
 
+        private string path = AppDomain.CurrentDomain.BaseDirectory + "galgje.txt";  //set path to "galgje.txt"
+
         private void Button6_Click(object sender, EventArgs e)
         {
             btnI.Enabled = false;             //disable the button
@@ -291,14 +293,48 @@ namespace ProjectGalgje
                 if (tllr == 10)
                 {
                     pbHangman.Image = Properties.Resources.Screenshot_103;
-                    MessageBox.Show("helaas, je bent verloren");
-                    Reset();
+                    MessageBox.Show("helaas, je bent verloren\n\nHet woord was: " + woord, "Uitslag", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     tllr = 0;
+                    disable();
+                    btnstart.Enabled = true;
+                    btnstart.Visible = true;
                 }
 
 
 
             }
+        }
+
+        public void disable()
+        {
+            lblwoord.Text = "";
+            btnA.Enabled = false;
+            btnB.Enabled = false;
+            btnC.Enabled = false;
+            btnD.Enabled = false;
+            btnE.Enabled = false;
+            btnF.Enabled = false;
+            btnG.Enabled = false;
+            btnH.Enabled = false;
+            btnI.Enabled = false;
+            btnJ.Enabled = false;
+            btnK.Enabled = false;
+            btnL.Enabled = false;
+            btnM.Enabled = false;
+            btnN.Enabled = false;
+            btnO.Enabled = false;
+            btnP.Enabled = false;
+            btnQ.Enabled = false;
+            btnR.Enabled = false;
+            btnS.Enabled = false;
+            btnT.Enabled = false;
+            btnU.Enabled = false;
+            btnV.Enabled = false;
+            btnW.Enabled = false;
+            btnX.Enabled = false;
+            btnY.Enabled = false;
+            btnZ.Enabled = false;
+            pbHangman.Image = null;
         }
 
         //reset the game
@@ -335,21 +371,12 @@ namespace ProjectGalgje
             btnX.Enabled = true;
             btnY.Enabled = true;
             btnZ.Enabled = true;
-            pbHangman.Image = null;
-
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             //call reset function
             Reset();
-
-            //enable buttons
-            btnstart.Enabled = false;
-            btnstart.Visible = false;
-
-            //set path to "galgje.txt"
-            string path = AppDomain.CurrentDomain.BaseDirectory + "galgje.txt";
 
             
 
@@ -384,12 +411,16 @@ namespace ProjectGalgje
                     lblwoord.Text += "_";
                 }
                 guessedword = lblwoord.Text;
+
+                //enable buttons
+                btnstart.Enabled = false;
+                btnstart.Visible = false;
             }
         }
 
         private void Frmgalgje_Load(object sender, EventArgs e)
         {
-
+            System.IO.File.WriteAllText(path, "");
         }
     }
 }

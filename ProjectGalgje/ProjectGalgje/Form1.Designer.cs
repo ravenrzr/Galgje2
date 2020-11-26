@@ -335,34 +335,34 @@
             this.afsluitenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 26;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // woordenIngevenToolStripMenuItem
             // 
             this.woordenIngevenToolStripMenuItem.Name = "woordenIngevenToolStripMenuItem";
-            this.woordenIngevenToolStripMenuItem.Size = new System.Drawing.Size(60, 23);
+            this.woordenIngevenToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.woordenIngevenToolStripMenuItem.Text = "Regels";
             this.woordenIngevenToolStripMenuItem.Click += new System.EventHandler(this.WoordenIngevenToolStripMenuItem_Click);
             // 
             // woordenToolStripMenuItem
             // 
             this.woordenToolStripMenuItem.Name = "woordenToolStripMenuItem";
-            this.woordenToolStripMenuItem.Size = new System.Drawing.Size(77, 23);
+            this.woordenToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.woordenToolStripMenuItem.Text = "Woorden";
             this.woordenToolStripMenuItem.Click += new System.EventHandler(this.WoordenToolStripMenuItem_Click);
             // 
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(45, 23);
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.infoToolStripMenuItem.Text = "Info";
             // 
             // afsluitenToolStripMenuItem
             // 
             this.afsluitenToolStripMenuItem.Name = "afsluitenToolStripMenuItem";
-            this.afsluitenToolStripMenuItem.Size = new System.Drawing.Size(74, 23);
+            this.afsluitenToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.afsluitenToolStripMenuItem.Text = "Afsluiten";
             this.afsluitenToolStripMenuItem.Click += new System.EventHandler(this.AfsluitenToolStripMenuItem_Click);
             // 
@@ -401,7 +401,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pbHangman);
             this.Controls.Add(this.btnstart);
             this.Controls.Add(this.lblwoord);
             this.Controls.Add(this.btnY);
@@ -431,6 +430,7 @@
             this.Controls.Add(this.btnB);
             this.Controls.Add(this.btnA);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.pbHangman);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmgalgje";
             this.Text = "Galgje";
