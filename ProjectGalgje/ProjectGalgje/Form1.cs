@@ -25,30 +25,28 @@ namespace ProjectGalgje
 
         private char letter;
 
-        private string path = AppDomain.CurrentDomain.BaseDirectory + "galgje.txt";  //set path to "galgje.txt"
-
-        private void Button6_Click(object sender, EventArgs e)
+        private void BtnI_Click(object sender, EventArgs e)
         {
             btnI.Enabled = false;             //disable the button
             letter = 'I';            //set the specified letter
             SetGalg();            //call function to change the label and check if player has won
         }
 
-        private void BtnA_Click(object sender, EventArgs e)
+        private void BtnA_Click_1(object sender, EventArgs e)
         {
             btnA.Enabled = false;
             letter = 'A';
             SetGalg();
         }
 
-        private void BtnF_Click(object sender, EventArgs e)
+        private void RondeButton23_Click(object sender, EventArgs e)
         {
             btnF.Enabled = false;
             letter = 'F';
             SetGalg();
         }
 
-        private void BtnB_Click(object sender, EventArgs e)
+        private void BtnB_Click_1(object sender, EventArgs e)
         {
             btnB.Enabled = false;
             letter = 'B';
@@ -154,7 +152,7 @@ namespace ProjectGalgje
             SetGalg();
         }
 
-        private void BtnS_Click(object sender, EventArgs e)
+        private void RondeButton15_Click(object sender, EventArgs e)
         {
             btnS.Enabled = false;
             letter = 'S';
@@ -248,10 +246,10 @@ namespace ProjectGalgje
 
             //check if word contains the pressed letter
 
-            if (woord.ToLower().Contains(letter.ToString().ToLower()))
+            if (woord.Contains(letter.ToString().ToLower()))
             {
                 //create array to split the chosen word into letters
-                char[] newword = woord.ToLower().ToCharArray();
+                char[] newword = woord.ToCharArray();
 
 
                 for (int count = 0; count < newword.Length; count++)
@@ -271,89 +269,36 @@ namespace ProjectGalgje
                 lblwoord.Text = guessedword;
 
                 //if the guessed word is equal to the chosen word then the player wins
-                if (guessedword.ToLower().Equals(woord.ToLower()))
+                if (guessedword.ToLower().Equals(woord))
                 {
                     MessageBox.Show("Je hebt gewonnen!", "Uitslag", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    disable();
                     btnstart.Enabled = true;
                     btnstart.Visible = true;
                 }
             }
             else
-            {
-                tllr++;
+            { tllr++;
                 
-                switch(tllr)
+                if(tllr == 1) { pbHangman.Image = Properties.Resources._1 ; }
+                if (tllr == 2) { pbHangman.Image = Properties.Resources._2; }
+                if (tllr == 3) { pbHangman.Image = Properties.Resources._3; }
+                if (tllr == 4) { pbHangman.Image = Properties.Resources._4; }
+                if (tllr == 5) { pbHangman.Image = Properties.Resources._5; }
+                if (tllr == 6) { pbHangman.Image = Properties.Resources._6; }
+                if (tllr == 7) { pbHangman.Image = Properties.Resources._7; }
+                if (tllr == 8) { pbHangman.Image = Properties.Resources._8; }
+                if (tllr == 9) { pbHangman.Image = Properties.Resources._9; }
+                if (tllr == 10)
                 {
-                    case 1:
-                        pbHangman.Image = Properties.Resources.Screenshot_94;
-                        break;
-                    case 2:
-                        pbHangman.Image = Properties.Resources.Screenshot_95;
-                        break;
-                    case 3:
-                        pbHangman.Image = Properties.Resources.Screenshot_96;
-                        break;
-                    case 4:
-                        pbHangman.Image = Properties.Resources.Screenshot_97;
-                        break;
-                    case 5:
-                        pbHangman.Image = Properties.Resources.Screenshot_98;
-                        break;
-                    case 6:
-                        pbHangman.Image = Properties.Resources.Screenshot_99;
-                        break;
-                    case 7:
-                        pbHangman.Image = Properties.Resources.Screenshot_100;
-                        break;
-                    case 8:
-                        pbHangman.Image = Properties.Resources.Screenshot_101;
-                        break;
-                    case 9:
-                        pbHangman.Image = Properties.Resources.Screenshot_102;
-                        break;
-                    case 10:
-                        pbHangman.Image = Properties.Resources.Screenshot_103;
-                        MessageBox.Show("helaas, je bent verloren\n\nHet woord was: " + woord, "Uitslag", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        tllr = 0;
-                        disable();
-                        btnstart.Enabled = true;
-                        btnstart.Visible = true;
-                        break;
+                    pbHangman.Image = Properties.Resources._10;
+                    MessageBox.Show("helaas, je bent verloren");
+                    Reset();
+                    tllr = 0;
                 }
-            }
-        }
 
-        public void disable()
-        {
-            lblwoord.Text = "";
-            btnA.Enabled = false;
-            btnB.Enabled = false;
-            btnC.Enabled = false;
-            btnD.Enabled = false;
-            btnE.Enabled = false;
-            btnF.Enabled = false;
-            btnG.Enabled = false;
-            btnH.Enabled = false;
-            btnI.Enabled = false;
-            btnJ.Enabled = false;
-            btnK.Enabled = false;
-            btnL.Enabled = false;
-            btnM.Enabled = false;
-            btnN.Enabled = false;
-            btnO.Enabled = false;
-            btnP.Enabled = false;
-            btnQ.Enabled = false;
-            btnR.Enabled = false;
-            btnS.Enabled = false;
-            btnT.Enabled = false;
-            btnU.Enabled = false;
-            btnV.Enabled = false;
-            btnW.Enabled = false;
-            btnX.Enabled = false;
-            btnY.Enabled = false;
-            btnZ.Enabled = false;
-            pbHangman.Image = null;
+
+
+            }
         }
 
         //reset the game
@@ -390,12 +335,21 @@ namespace ProjectGalgje
             btnX.Enabled = true;
             btnY.Enabled = true;
             btnZ.Enabled = true;
+            pbHangman.Image = null;
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             //call reset function
             Reset();
+
+            //enable buttons
+            btnstart.Enabled = false;
+            btnstart.Visible = false;
+
+            //set path to "galgje.txt"
+            string path = AppDomain.CurrentDomain.BaseDirectory + "galgje.txt";
 
             
 
@@ -430,16 +384,14 @@ namespace ProjectGalgje
                     lblwoord.Text += "_";
                 }
                 guessedword = lblwoord.Text;
-
-                //enable buttons
-                btnstart.Enabled = false;
-                btnstart.Visible = false;
             }
         }
 
         private void Frmgalgje_Load(object sender, EventArgs e)
         {
-            System.IO.File.WriteAllText(path, "");
+
         }
+
+    
     }
 }

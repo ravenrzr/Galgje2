@@ -28,7 +28,6 @@ C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\bin\Debug\Pro
 C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\bin\Debug\ProjectGalgje.exe
 C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\bin\Debug\ProjectGalgje.pdb
 C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\bin\Debug\System.Collections.Immutable.dll
-C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csprojAssemblyReference.cache
 C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.frmgalgje.resources
 C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.frmwoorden.resources
 C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.Properties.Resources.resources
@@ -37,3 +36,4 @@ C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\Pro
 C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csproj.CopyComplete
 C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.exe
 C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.pdb
+C:\Users\avid\Documents\galgje\Galgje2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csprojAssemblyReference.cache
