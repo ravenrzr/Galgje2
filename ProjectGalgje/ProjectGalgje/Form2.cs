@@ -31,10 +31,10 @@ namespace ProjectGalgje
             //create array from "woorden.txt" and replace all spaces
             string[] list = lees.ReadToEnd().Split(',');
 
-            for(int count = 0; count < list.Length; count++)
+            for (int count = 0; count < list.Length; count++)
             {
                 //check if the array contains spaces
-                if(list[count].Contains(" "))
+                if (list[count].Contains(" "))
                 {
                     //replace spaces with empty string
                     list[count] = list[count].Replace(" ", "");
@@ -47,7 +47,7 @@ namespace ProjectGalgje
         private void Btnverwijderen_Click(object sender, EventArgs e)
         {
             //check if the user hasn't selected any items from the list
-            if(lstbxwoorden.SelectedIndex == -1)
+            if (lstbxwoorden.SelectedIndex == -1)
             {
                 //send error message
                 MessageBox.Show("Niks geselecteerd!", "Fout", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -62,7 +62,7 @@ namespace ProjectGalgje
         private void Btninvoegen_Click(object sender, EventArgs e)
         {
             //check if the user has filled in the textbox
-            if(!txtinvoegen.Text.Equals(""))
+            if (!txtinvoegen.Text.Equals(""))
             {
                 //check if the word in the textbox is already a part of the list
                 if (!lstbxwoorden.Items.Contains(txtinvoegen.Text))
@@ -86,7 +86,7 @@ namespace ProjectGalgje
         private void Btnleeg_Click(object sender, EventArgs e)
         {
             //check if the list has any items to clear
-            if(lstbxwoorden.Items.Count != 0)
+            if (lstbxwoorden.Items.Count != 0)
             {
                 //clear list
                 lstbxwoorden.Items.Clear();
@@ -124,7 +124,7 @@ namespace ProjectGalgje
 
         private void Cmbxcat_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch(cmbxcat.SelectedIndex)
+            switch (cmbxcat.SelectedIndex)
             {
                 case 0:
                     lstbxwoorden.Items.Add("broek");

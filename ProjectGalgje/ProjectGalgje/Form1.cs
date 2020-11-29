@@ -8,12 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using Microsoft.VisualBasic;
 
 namespace ProjectGalgje
 {
     public partial class frmgalgje : Form
     {
-        int tllr = 0;
+        private int time = 0;
+
+        private int seconds = 300;
+
+        private int tllr = 0;
         public frmgalgje()
         {
             InitializeComponent();
@@ -25,30 +30,31 @@ namespace ProjectGalgje
 
         private char letter;
 
-        private string path = AppDomain.CurrentDomain.BaseDirectory + "galgje.txt";  //set path to "galgje.txt"
+        //set path to "galgje.txt"
+        private string path = AppDomain.CurrentDomain.BaseDirectory + "galgje.txt";
 
-        private void Button6_Click(object sender, EventArgs e)
+        private void BtnI_Click(object sender, EventArgs e)
         {
             btnI.Enabled = false;             //disable the button
             letter = 'I';            //set the specified letter
             SetGalg();            //call function to change the label and check if player has won
         }
 
-        private void BtnA_Click(object sender, EventArgs e)
+        private void BtnA_Click_1(object sender, EventArgs e)
         {
             btnA.Enabled = false;
             letter = 'A';
             SetGalg();
         }
 
-        private void BtnF_Click(object sender, EventArgs e)
+        private void RondeButton23_Click(object sender, EventArgs e)
         {
             btnF.Enabled = false;
             letter = 'F';
             SetGalg();
         }
 
-        private void BtnB_Click(object sender, EventArgs e)
+        private void BtnB_Click_1(object sender, EventArgs e)
         {
             btnB.Enabled = false;
             letter = 'B';
@@ -154,7 +160,7 @@ namespace ProjectGalgje
             SetGalg();
         }
 
-        private void BtnS_Click(object sender, EventArgs e)
+        private void RondeButton15_Click(object sender, EventArgs e)
         {
             btnS.Enabled = false;
             letter = 'S';
@@ -248,10 +254,10 @@ namespace ProjectGalgje
 
             //check if word contains the pressed letter
 
-            if (woord.ToLower().Contains(letter.ToString().ToLower()))
+            if (woord.Contains(letter.ToString().ToLower()))
             {
                 //create array to split the chosen word into letters
-                char[] newword = woord.ToLower().ToCharArray();
+                char[] newword = woord.ToCharArray();
 
 
                 for (int count = 0; count < newword.Length; count++)
@@ -271,8 +277,9 @@ namespace ProjectGalgje
                 lblwoord.Text = guessedword;
 
                 //if the guessed word is equal to the chosen word then the player wins
-                if (guessedword.ToLower().Equals(woord.ToLower()))
+                if (guessedword.ToLower().Equals(woord))
                 {
+                    tmrdeath.Enabled = false;
                     MessageBox.Show("Je hebt gewonnen!", "Uitslag", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     disable();
                     tllr = 0;
@@ -284,38 +291,39 @@ namespace ProjectGalgje
             else
             {
                 tllr++;
-                
-                switch(tllr)
+
+                switch (tllr)
                 {
                     case 1:
-                        pbHangman.Image = Properties.Resources.Screenshot_94;
+                        pbHangman.Image = Properties.Resources._1;
                         break;
                     case 2:
-                        pbHangman.Image = Properties.Resources.Screenshot_95;
+                        pbHangman.Image = Properties.Resources._2;
                         break;
                     case 3:
-                        pbHangman.Image = Properties.Resources.Screenshot_96;
+                        pbHangman.Image = Properties.Resources._3;
                         break;
                     case 4:
-                        pbHangman.Image = Properties.Resources.Screenshot_97;
+                        pbHangman.Image = Properties.Resources._4;
                         break;
                     case 5:
-                        pbHangman.Image = Properties.Resources.Screenshot_98;
+                        pbHangman.Image = Properties.Resources._5;
                         break;
                     case 6:
-                        pbHangman.Image = Properties.Resources.Screenshot_99;
+                        pbHangman.Image = Properties.Resources._6;
                         break;
                     case 7:
-                        pbHangman.Image = Properties.Resources.Screenshot_100;
+                        pbHangman.Image = Properties.Resources._7;
                         break;
                     case 8:
-                        pbHangman.Image = Properties.Resources.Screenshot_101;
+                        pbHangman.Image = Properties.Resources._8;
                         break;
                     case 9:
-                        pbHangman.Image = Properties.Resources.Screenshot_102;
+                        pbHangman.Image = Properties.Resources._9;
                         break;
                     case 10:
-                        pbHangman.Image = Properties.Resources.Screenshot_103;
+                        pbHangman.Image = Properties.Resources._10;
+                        tmrdeath.Enabled = false;
                         MessageBox.Show("helaas, je bent verloren\n\nHet woord was: " + woord, "Uitslag", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         tllr = 0;
                         disable();
@@ -393,11 +401,11 @@ namespace ProjectGalgje
             btnX.Enabled = true;
             btnY.Enabled = true;
             btnZ.Enabled = true;
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-
             //create random numbergenerator
 
             Random random = new Random();
@@ -435,6 +443,8 @@ namespace ProjectGalgje
                 //enable buttons
                 btnstart.Enabled = false;
                 btnstart.Visible = false;
+                time = 0;
+                tmrdeath.Enabled = true;
             }
         }
 
@@ -442,6 +452,55 @@ namespace ProjectGalgje
         {
             disable();
             File.WriteAllText(path, "");
+        }
+
+        private void AuteursToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Matthis Van Hoecke en Avid Akbar Ghafouri", "Auteurs", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Tmrdeath_Tick(object sender, EventArgs e)
+        {
+            time++;
+            int min = (seconds - time)/60;
+            int sec = (seconds - time) % 60;
+
+            if(min < 10)
+            {
+                lbltime.Text = "0" + min;
+            }
+            else
+            {
+                lbltime.Text = min.ToString();
+            }
+            if(sec < 10)
+            {
+                lbltime.Text += ":0" + sec;
+            }
+            else
+            {
+                lbltime.Text += ":" + sec;
+            }
+
+            if (time == seconds)
+            {
+                pbHangman.Image = Properties.Resources._10;
+                tmrdeath.Enabled = false;
+                MessageBox.Show("tijd verlopen, je bent verloren\n\nHet woord was: " + woord, "Uitslag", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tllr = 0;
+                disable();
+                btnstart.Enabled = true;
+                btnstart.Visible = true;
+                woord = "";
+            }
+        }
+
+        private void TimerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            while (!int.TryParse(Interaction.InputBox("Zet timer in hoeveelheid tijd in seconden: ", "Timer"), out seconds))
+            {
+                MessageBox.Show("Geef alstublieft een cijfer in.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

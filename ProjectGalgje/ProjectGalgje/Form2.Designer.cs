@@ -102,26 +102,26 @@
             "Dieren",
             "Computeronderdelen",
             "Videogames"});
-            this.cmbxcat.Location = new System.Drawing.Point(199, 40);
+            this.cmbxcat.Location = new System.Drawing.Point(200, 40);
             this.cmbxcat.Name = "cmbxcat";
             this.cmbxcat.Size = new System.Drawing.Size(121, 21);
-            this.cmbxcat.TabIndex = 6;
+            this.cmbxcat.TabIndex = 7;
             this.cmbxcat.SelectedIndexChanged += new System.EventHandler(this.Cmbxcat_SelectedIndexChanged);
             // 
             // lblcat
             // 
             this.lblcat.AutoSize = true;
-            this.lblcat.Location = new System.Drawing.Point(226, 17);
+            this.lblcat.Location = new System.Drawing.Point(225, 17);
             this.lblcat.Name = "lblcat";
             this.lblcat.Size = new System.Drawing.Size(64, 13);
-            this.lblcat.TabIndex = 7;
+            this.lblcat.TabIndex = 8;
             this.lblcat.Text = "Categoriëen";
             // 
             // frmwoorden
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 217);
+            this.ClientSize = new System.Drawing.Size(333, 224);
             this.Controls.Add(this.lblcat);
             this.Controls.Add(this.cmbxcat);
             this.Controls.Add(this.btnleeg);
