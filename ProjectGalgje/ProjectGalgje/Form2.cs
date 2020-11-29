@@ -18,6 +18,9 @@ namespace ProjectGalgje
             InitializeComponent();
         }
 
+        //set path to "galgje.txt"
+        private string path = AppDomain.CurrentDomain.BaseDirectory + "galgje.txt";
+
         private void Btnalle_Click(object sender, EventArgs e)
         {
 
@@ -97,8 +100,6 @@ namespace ProjectGalgje
 
         private void Frmwoorden_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //set path to "galgje.txt"
-            string path = AppDomain.CurrentDomain.BaseDirectory + "galgje.txt";
 
             //write the items from the list to "galgje.txt"
             using (StreamWriter writer = File.CreateText(path))
@@ -112,7 +113,66 @@ namespace ProjectGalgje
 
         private void Frmwoorden_Load(object sender, EventArgs e)
         {
+            using (StreamReader reader = new StreamReader(path))
+            {
+                for (int count = 0; count < File.ReadAllLines(path).Length; count++)
+                {
+                    lstbxwoorden.Items.Add(reader.ReadLine());
+                }
+            }
+        }
 
+        private void Cmbxcat_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch(cmbxcat.SelectedIndex)
+            {
+                case 0:
+                    lstbxwoorden.Items.Add("broek");
+                    lstbxwoorden.Items.Add("tshirt");
+                    lstbxwoorden.Items.Add("hemd");
+                    lstbxwoorden.Items.Add("trui");
+                    lstbxwoorden.Items.Add("onderbroek");
+                    lstbxwoorden.Items.Add("sokken");
+                    lstbxwoorden.Items.Add("handschoenen");
+                    lstbxwoorden.Items.Add("schoenen");
+                    break;
+                case 1:
+                    lstbxwoorden.Items.Add("sofa");
+                    lstbxwoorden.Items.Add("stoel");
+                    lstbxwoorden.Items.Add("kast");
+                    lstbxwoorden.Items.Add("bureau");
+                    lstbxwoorden.Items.Add("tafel");
+                    break;
+                case 2:
+                    lstbxwoorden.Items.Add("gorilla");
+                    lstbxwoorden.Items.Add("giraf");
+                    lstbxwoorden.Items.Add("zebra");
+                    lstbxwoorden.Items.Add("leeuw");
+                    lstbxwoorden.Items.Add("schildpad");
+                    lstbxwoorden.Items.Add("nijlpaard");
+                    lstbxwoorden.Items.Add("neushoorn");
+                    lstbxwoorden.Items.Add("eekhoorn");
+                    lstbxwoorden.Items.Add("paard");
+                    lstbxwoorden.Items.Add("kat");
+                    lstbxwoorden.Items.Add("hond");
+                    break;
+                case 3:
+                    lstbxwoorden.Items.Add("processor");
+                    lstbxwoorden.Items.Add("videokaart");
+                    lstbxwoorden.Items.Add("geheugen");
+                    lstbxwoorden.Items.Add("hardeschijf");
+                    lstbxwoorden.Items.Add("moederbord");
+                    lstbxwoorden.Items.Add("case");
+                    break;
+                case 4:
+                    lstbxwoorden.Items.Add("Doom");
+                    lstbxwoorden.Items.Add("Minecraft");
+                    lstbxwoorden.Items.Add("Valorant");
+                    lstbxwoorden.Items.Add("Apex");
+                    lstbxwoorden.Items.Add("Halo");
+                    lstbxwoorden.Items.Add("csgo");
+                    break;
+            }
         }
     }
 }
