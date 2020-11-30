@@ -197,7 +197,7 @@ namespace ProjectGalgje
 
         private void BtnX_Click(object sender, EventArgs e)
         {
-            btnW.Enabled = false;
+            btnX.Enabled = false;
             letter = 'X';
             SetGalg();
         }

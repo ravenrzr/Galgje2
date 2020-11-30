@@ -50,3 +50,16 @@ D:\school\C# projects\jaar 2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje
 D:\school\C# projects\jaar 2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csproj.CopyComplete
 D:\school\C# projects\jaar 2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.exe
 D:\school\C# projects\jaar 2\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.pdb
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Nieuwe map\master\ProjectGalgje\ProjectGalgje\bin\Debug\ProjectGalgje.exe.config
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Nieuwe map\master\ProjectGalgje\ProjectGalgje\bin\Debug\ProjectGalgje.exe
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Nieuwe map\master\ProjectGalgje\ProjectGalgje\bin\Debug\ProjectGalgje.pdb
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Nieuwe map\master\ProjectGalgje\ProjectGalgje\bin\Debug\System.Collections.Immutable.dll
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Nieuwe map\master\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csprojAssemblyReference.cache
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Nieuwe map\master\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.frmgalgje.resources
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Nieuwe map\master\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.frmwoorden.resources
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Nieuwe map\master\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.Properties.Resources.resources
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Nieuwe map\master\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csproj.GenerateResource.cache
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Nieuwe map\master\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csproj.CoreCompileInputs.cache
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Nieuwe map\master\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.csproj.CopyComplete
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Nieuwe map\master\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.exe
+C:\Users\rll6ib\Documents\5IB\Matthis_Van_Hoecke\C#\Hoofdstuk_1\Nieuwe map\master\ProjectGalgje\ProjectGalgje\obj\Debug\ProjectGalgje.pdb
